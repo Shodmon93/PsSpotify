@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    tools:viewBindingIgnore="true">
+
+    <TextView
+        android:id="@+id/topMix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Top Mix album"
+        app:layout_constraintBottom_toTopOf="@+id/topMixRecycler"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/topMixRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topMix" />
+
+    <TextView
+        android:id="@+id/recentTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recently played"
+        app:layout_constraintBottom_toTopOf="@+id/recentlyPlayedRecycler"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topMixRecycler" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recentlyPlayedRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topMixRecycler" />
+
+    <ImageView
+        android:id="@+id/image1"
+        android:layout_width="105dp"
+        android:layout_height="95dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/dice_6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/popular" />
+
+    <ImageView
+        android:id="@+id/image2"
+        android:layout_width="105dp"
+        android:layout_height="95dp"
+        android:layout_marginStart="37dp"
+        android:src="@drawable/dice_6"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/image1"
+        app:layout_constraintTop_toTopOf="@+id/image1" />
+
+    <ImageView
+        android:id="@+id/image3"
+        android:layout_width="105dp"
+        android:layout_height="95dp"
+        android:src="@drawable/dice_6"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/image2"
+        app:layout_constraintTop_toTopOf="@+id/image2"/>
+
+    <TextView
+        android:id="@+id/popular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Popular albums"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/image1"
+        app:layout_constraintStart_toStartOf="@+id/image1"
+        app:layout_constraintTop_toBottomOf="@+id/recentlyPlayedRecycler" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
